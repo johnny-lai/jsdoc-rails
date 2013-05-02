@@ -1,5 +1,6 @@
 module Jsdoc
   class Property < ActiveRecord::Base
+    attr_protected
     belongs_to :symbol
 
     has_many :borrowed_to_join, :class_name => 'Jsdoc::BorrowedProperty', :dependent => :destroy

@@ -1,5 +1,6 @@
 module Jsdoc
   class Symbol < ActiveRecord::Base
+    attr_protected
     belongs_to :project_version, :class_name => 'Jsdoc::Version'
     has_one :project, :through => :project_version
 

@@ -1,5 +1,6 @@
 module Jsdoc
   class Function < ActiveRecord::Base
+    attr_protected
     belongs_to :symbol
     has_many :params, :dependent => :destroy
     has_many :returns, :dependent => :destroy
